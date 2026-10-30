@@ -1,3 +1,4 @@
+import AuthStatus from "./AuthStatus";
 import Link from "next/link";
 import styles from "./Header.module.css";
 
@@ -8,6 +9,7 @@ export default function Header() {
         <Link href="/" className={styles.logo}>
           Supabase Auth
         </Link>
+
         <ul className={styles.links}>
           <li>
             <Link href="/">Home</Link>
@@ -16,12 +18,11 @@ export default function Header() {
             <Link href="/profile">Profile</Link>
           </li>
           <li>
-            <Link href="/signup">Sign up</Link>
-          </li>
-          <li>
-            <Link href="/login">Log in</Link>
+            <Link href="/members">Members</Link>
           </li>
         </ul>
+
+        <AuthStatus />
       </nav>
     </header>
   );
